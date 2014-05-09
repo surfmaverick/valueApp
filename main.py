@@ -31,5 +31,5 @@ test.setupframe(dates, dfname='ops')
 dates = preparedates(datetime(2015, 1, 27), datetime(2035, 1, 26), 'M')
 test.setupframe(dates, dfname='construction')
 
-print(1)
+print(x)
 test.setupproductionschedule(prodschedule, dfname='ops', dfcolumn='production')
