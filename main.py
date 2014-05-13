@@ -17,7 +17,7 @@ prodschedulequarterly = asset.monthlytoquarterly(prodschedulemonthly,firstquarte
 
 
 # instantiate the asset
-test = asset.WindPowerPlant(name='test',periods='Q',type='OffshoreWind')
+test = asset.WindPowerPlant(name='test', type='OffshoreWind')
 
 
 # first we must must properly setup the dates that we will.  This is a critiacl first step as the date ranges will drive
