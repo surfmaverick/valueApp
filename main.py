@@ -17,7 +17,7 @@ prodschedulequarterly = asset.monthlytoquarterly(prodschedulemonthly,firstquarte
 
 
 # instantiate the asset
-test = asset.WindPowerPlant(name='test', type='OffshoreWind')
+test = asset.WindPowerPlant(name='test', periods='Q', type='OffshoreWind')
 
 
 # first we must must properly setup the dates that we will.  This is a critiacl first step as the date ranges will drive
@@ -25,12 +25,12 @@ test = asset.WindPowerPlant(name='test', type='OffshoreWind')
 
 #then setup the frame for construction
 dates = preparedates(startdate=datetime(2015, 1, 27), enddate=datetime(2017, 1, 27), freq='M')
-test.setupframe(dates, dfname='construction')
+test.setup_frame(dates, dfname='construction')
 
 #first setup the frame for operations
 dates = preparedates(startdate=datetime(2017, 1, 27), enddate=datetime(2035, 1, 27), freq='Q')
-test.setupframe(dates, dfname='ops')
+test.setup_frame(dates, dfname='ops')
 
-test.setupproductionschedule(prodschedulequarterly, dfname='ops', dfcolumn='production')
+test.setup_production_schedule(prodschedulequarterly, dfname='ops', dfcolumn='production')
 
 dates = preparedates(startdate=datetime(2017, 1, 27), enddate=datetime(2035, 1, 27), freq='Q')

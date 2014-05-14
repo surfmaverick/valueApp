@@ -7,9 +7,10 @@ Class Revenue():
         self.info = {}
         self.info['name'] = name
         self.info['type'] = type
-        self.info['periodrule'] = description
+        self.info['period_rule'] = description
         self.info['exceptions'] = exceptions
 
+    def _date( self ):
 
 
 Class OperatingRevenue(Revenue):
