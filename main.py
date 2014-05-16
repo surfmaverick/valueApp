@@ -32,3 +32,5 @@ dates = preparedates(startdate=datetime(2017, 1, 27), enddate=datetime(2035, 1, 
 test.setup_frame(dates, dfname='ops')
 
 test.setup_production_schedule(prodschedulequarterly, dfname='ops', dfcolumn='production')
+
+# TODO: to do a concat:  z=pd.tools.merge.concat([test.construction,test.ops],join='outer')
